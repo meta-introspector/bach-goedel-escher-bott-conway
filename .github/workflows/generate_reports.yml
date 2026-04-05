@@ -1,0 +1,36 @@
+name: Generate Holomorphic Reports
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: meta-introspector/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: meta-introspector/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install numpy
+
+      - name: Generate Reports
+        run: |
+          python generate_report.py
+
+      - name: Commit and Push Report
+        run: |
+          git config --global user.name "BGEBC Holomorphic Bot"
+          git config --global user.email "bot@meta-introspector.org"
+          git add index.html
+          git commit -m "Update Holomorphic Dashboard [skip ci]" || echo "No changes to commit"
+          git push origin master
