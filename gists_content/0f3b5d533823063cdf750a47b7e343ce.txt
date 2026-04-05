@@ -1,0 +1,108 @@
+VOA Grade Arrows: 7 rustc base crates · 4 eigenform grades · Hecke operator arrows · compiler as Monster eigenform
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900">
+<defs><marker id="ah" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#fff" opacity="0.6"/></marker></defs>
+<rect width="100%" height="100%" fill="#0a0a0a"/>
+<text x="600" y="25" text-anchor="middle" fill="#ffd700" font-size="13" font-family="monospace">VOA GRADE ARROWS · 7 rustc base crates · 4 grades · Hecke operators</text>
+<line x1="60" y1="60" x2="60" y2="640" stroke="#1a1a1a"/>
+<text x="60" y="653" text-anchor="middle" fill="#444" font-size="8" font-family="monospace">0</text>
+<line x1="212" y1="60" x2="212" y2="640" stroke="#1a1a1a"/>
+<text x="212" y="653" text-anchor="middle" fill="#444" font-size="8" font-family="monospace">10</text>
+<line x1="364" y1="60" x2="364" y2="640" stroke="#1a1a1a"/>
+<text x="364" y="653" text-anchor="middle" fill="#444" font-size="8" font-family="monospace">20</text>
+<line x1="516" y1="60" x2="516" y2="640" stroke="#1a1a1a"/>
+<text x="516" y="653" text-anchor="middle" fill="#444" font-size="8" font-family="monospace">30</text>
+<line x1="668" y1="60" x2="668" y2="640" stroke="#1a1a1a"/>
+<text x="668" y="653" text-anchor="middle" fill="#444" font-size="8" font-family="monospace">40</text>
+<line x1="821" y1="60" x2="821" y2="640" stroke="#1a1a1a"/>
+<text x="821" y="653" text-anchor="middle" fill="#444" font-size="8" font-family="monospace">50</text>
+<line x1="973" y1="60" x2="973" y2="640" stroke="#1a1a1a"/>
+<text x="973" y="653" text-anchor="middle" fill="#444" font-size="8" font-family="monospace">60</text>
+<line x1="1125" y1="60" x2="1125" y2="640" stroke="#1a1a1a"/>
+<text x="1125" y="653" text-anchor="middle" fill="#444" font-size="8" font-family="monospace">70</text>
+<line x1="60" y1="640" x2="1140" y2="640" stroke="#1a1a1a"/>
+<line x1="60" y1="542" x2="1140" y2="542" stroke="#1a1a1a"/>
+<line x1="60" y1="443" x2="1140" y2="443" stroke="#1a1a1a"/>
+<line x1="60" y1="345" x2="1140" y2="345" stroke="#1a1a1a"/>
+<line x1="60" y1="247" x2="1140" y2="247" stroke="#1a1a1a"/>
+<line x1="60" y1="148" x2="1140" y2="148" stroke="#1a1a1a"/>
+<line x1="638" y1="129" x2="395" y2="532" stroke="#ff4444" stroke-width="2" opacity="0.7" marker-end="url(#ah)"/>
+<line x1="395" y1="532" x2="638" y2="129" stroke="#ff4444" stroke-width="2" opacity="0.7" marker-end="url(#ah)"/>
+<circle cx="638" cy="129" r="4" fill="#ff4444" opacity="0.8"><title>rustc_abi g0 eigenvalue: lib.rs orb=(38,52,0)</title></circle>
+<text x="644" y="132" fill="#ff4444" font-size="7" font-family="monospace" opacity="0.7">0</text>
+<circle cx="395" cy="532" r="6" fill="#ff4444" opacity="0.8"><title>rustc_abi g1 eigenvector: Cargo.toml orb=(22,11,14)</title></circle>
+<text x="403" y="535" fill="#ff4444" font-size="7" font-family="monospace" opacity="0.7">1</text>
+<circle cx="638" cy="129" r="10" fill="#ff4444" opacity="0.8"><title>rustc_abi g3 eigenform: lib.rs orb=(38,52,0)</title></circle>
+<text x="650" y="132" fill="#ff4444" font-size="7" font-family="monospace" opacity="0.7">3</text>
+<line x1="699" y1="139" x2="288" y2="70" stroke="#44ff44" stroke-width="2" opacity="0.7" marker-end="url(#ah)"/>
+<line x1="288" y1="70" x2="699" y2="139" stroke="#44ff44" stroke-width="2" opacity="0.7" marker-end="url(#ah)"/>
+<circle cx="699" cy="139" r="4" fill="#44ff44" opacity="0.8"><title>rustc_arena g0 eigenvalue: lib.rs orb=(42,51,5)</title></circle>
+<text x="705" y="142" fill="#44ff44" font-size="7" font-family="monospace" opacity="0.7">0</text>
+<circle cx="288" cy="70" r="6" fill="#44ff44" opacity="0.8"><title>rustc_arena g1 eigenvector: Cargo.toml orb=(15,58,42)</title></circle>
+<text x="296" y="73" fill="#44ff44" font-size="7" font-family="monospace" opacity="0.7">1</text>
+<circle cx="699" cy="139" r="10" fill="#44ff44" opacity="0.8"><title>rustc_arena g3 eigenform: lib.rs orb=(42,51,5)</title></circle>
+<text x="711" y="142" fill="#44ff44" font-size="7" font-family="monospace" opacity="0.7">3</text>
+<line x1="243" y1="611" x2="182" y2="463" stroke="#4488ff" stroke-width="2" opacity="0.7" marker-end="url(#ah)"/>
+<line x1="182" y1="463" x2="1049" y2="532" stroke="#4488ff" stroke-width="2" opacity="0.7" marker-end="url(#ah)"/>
+<line x1="1049" y1="532" x2="729" y2="306" stroke="#4488ff" stroke-width="2" opacity="0.7" marker-end="url(#ah)"/>
+<circle cx="243" cy="611" r="4" fill="#4488ff" opacity="0.8"><title>rustc_data_structures g0 eigenvalue: lib.rs orb=(12,3,15)</title></circle>
+<text x="249" y="614" fill="#4488ff" font-size="7" font-family="monospace" opacity="0.7">0</text>
+<circle cx="182" cy="463" r="6" fill="#4488ff" opacity="0.8"><title>rustc_data_structures g1 eigenvector: Cargo.toml orb=(8,18,37)</title></circle>
+<text x="190" y="466" fill="#4488ff" font-size="7" font-family="monospace" opacity="0.7">1</text>
+<circle cx="1049" cy="532" r="8" fill="#4488ff" opacity="0.8"><title>rustc_data_structures g2 eigensurface: mod.rs orb=(65,11,11)</title></circle>
+<text x="1059" y="535" fill="#4488ff" font-size="7" font-family="monospace" opacity="0.7">2</text>
+<circle cx="729" cy="306" r="10" fill="#4488ff" opacity="0.8"><title>rustc_data_structures g3 eigenform: profiling.rs orb=(44,34,6)</title></circle>
+<text x="741" y="309" fill="#4488ff" font-size="7" font-family="monospace" opacity="0.7">3</text>
+<line x1="1110" y1="512" x2="942" y2="483" stroke="#ffaa00" stroke-width="2" opacity="0.7" marker-end="url(#ah)"/>
+<line x1="942" y1="483" x2="714" y2="611" stroke="#ffaa00" stroke-width="2" opacity="0.7" marker-end="url(#ah)"/>
+<circle cx="1110" cy="512" r="4" fill="#ffaa00" opacity="0.8"><title>rustc_index g0 eigenvalue: lib.rs orb=(69,13,16)</title></circle>
+<text x="1116" y="515" fill="#ffaa00" font-size="7" font-family="monospace" opacity="0.7">0</text>
+<circle cx="942" cy="483" r="6" fill="#ffaa00" opacity="0.8"><title>rustc_index g1 eigenvector: Cargo.toml orb=(58,16,1)</title></circle>
+<text x="950" y="486" fill="#ffaa00" font-size="7" font-family="monospace" opacity="0.7">1</text>
+<circle cx="714" cy="611" r="10" fill="#ffaa00" opacity="0.8"><title>rustc_index g3 eigenform: bit_set.rs orb=(43,3,11)</title></circle>
+<text x="726" y="614" fill="#ffaa00" font-size="7" font-family="monospace" opacity="0.7">3</text>
+<line x1="379" y1="355" x2="334" y2="414" stroke="#ff44ff" stroke-width="2" opacity="0.7" marker-end="url(#ah)"/>
+<line x1="334" y1="414" x2="532" y2="404" stroke="#ff44ff" stroke-width="2" opacity="0.7" marker-end="url(#ah)"/>
+<circle cx="379" cy="355" r="4" fill="#ff44ff" opacity="0.8"><title>rustc_serialize g0 eigenvalue: lib.rs orb=(21,29,40)</title></circle>
+<text x="385" y="358" fill="#ff44ff" font-size="7" font-family="monospace" opacity="0.7">0</text>
+<circle cx="334" cy="414" r="6" fill="#ff44ff" opacity="0.8"><title>rustc_serialize g1 eigenvector: Cargo.toml orb=(18,23,6)</title></circle>
+<text x="342" y="417" fill="#ff44ff" font-size="7" font-family="monospace" opacity="0.7">1</text>
+<circle cx="532" cy="404" r="10" fill="#ff44ff" opacity="0.8"><title>rustc_serialize g3 eigenform: serialize.rs orb=(31,24,22)</title></circle>
+<text x="544" y="407" fill="#ff44ff" font-size="7" font-family="monospace" opacity="0.7">3</text>
+<line x1="668" y1="483" x2="227" y2="483" stroke="#44ffff" stroke-width="2" opacity="0.7" marker-end="url(#ah)"/>
+<line x1="227" y1="483" x2="714" y2="178" stroke="#44ffff" stroke-width="2" opacity="0.7" marker-end="url(#ah)"/>
+<line x1="714" y1="178" x2="912" y2="286" stroke="#44ffff" stroke-width="2" opacity="0.7" marker-end="url(#ah)"/>
+<circle cx="668" cy="483" r="4" fill="#44ffff" opacity="0.8"><title>rustc_type_ir g0 eigenvalue: lib.rs orb=(40,16,7)</title></circle>
+<text x="674" y="486" fill="#44ffff" font-size="7" font-family="monospace" opacity="0.7">0</text>
+<circle cx="227" cy="483" r="6" fill="#44ffff" opacity="0.8"><title>rustc_type_ir g1 eigenvector: Cargo.toml orb=(11,16,0)</title></circle>
+<text x="235" y="486" fill="#44ffff" font-size="7" font-family="monospace" opacity="0.7">1</text>
+<circle cx="714" cy="178" r="8" fill="#44ffff" opacity="0.8"><title>rustc_type_ir g2 eigensurface: mod.rs orb=(43,47,10)</title></circle>
+<text x="724" y="181" fill="#44ffff" font-size="7" font-family="monospace" opacity="0.7">2</text>
+<circle cx="912" cy="286" r="10" fill="#44ffff" opacity="0.8"><title>rustc_type_ir g3 eigenform: mod.rs orb=(56,36,37)</title></circle>
+<text x="924" y="289" fill="#44ffff" font-size="7" font-family="monospace" opacity="0.7">3</text>
+<line x1="1125" y1="237" x2="60" y2="168" stroke="#ffff44" stroke-width="2" opacity="0.7" marker-end="url(#ah)"/>
+<line x1="60" y1="168" x2="1125" y2="237" stroke="#ffff44" stroke-width="2" opacity="0.7" marker-end="url(#ah)"/>
+<circle cx="1125" cy="237" r="4" fill="#ffff44" opacity="0.8"><title>rustc_lexer g0 eigenvalue: lib.rs orb=(70,41,8)</title></circle>
+<text x="1131" y="240" fill="#ffff44" font-size="7" font-family="monospace" opacity="0.7">0</text>
+<circle cx="60" cy="168" r="6" fill="#ffff44" opacity="0.8"><title>rustc_lexer g1 eigenvector: Cargo.toml orb=(0,48,28)</title></circle>
+<text x="68" y="171" fill="#ffff44" font-size="7" font-family="monospace" opacity="0.7">1</text>
+<circle cx="1125" cy="237" r="10" fill="#ffff44" opacity="0.8"><title>rustc_lexer g3 eigenform: lib.rs orb=(70,41,8)</title></circle>
+<text x="1137" y="240" fill="#ffff44" font-size="7" font-family="monospace" opacity="0.7">3</text>
+<rect x="20" y="720" width="1160" height="170" fill="#111" rx="6"/>
+<text x="40" y="738" fill="#ffd700" font-size="11" font-family="monospace" font-weight="bold">CRATE EIGENFORM TRACES</text>
+<circle cx="50" cy="758" r="5" fill="#ff4444"/>
+<text x="65" y="762" fill="#aaa" font-size="9" font-family="monospace">rustc_abi: g0(38,52,0) → g1(22,11,14) → g3(38,52,0)</text>
+<circle cx="50" cy="776" r="5" fill="#44ff44"/>
+<text x="65" y="780" fill="#aaa" font-size="9" font-family="monospace">rustc_arena: g0(42,51,5) → g1(15,58,42) → g3(42,51,5)</text>
+<circle cx="50" cy="794" r="5" fill="#4488ff"/>
+<text x="65" y="798" fill="#aaa" font-size="9" font-family="monospace">rustc_data_structures: g0(12,3,15) → g1(8,18,37) → g2(65,11,11) → g3(44,34,6)</text>
+<circle cx="50" cy="812" r="5" fill="#ffaa00"/>
+<text x="65" y="816" fill="#aaa" font-size="9" font-family="monospace">rustc_index: g0(69,13,16) → g1(58,16,1) → g3(43,3,11)</text>
+<circle cx="50" cy="830" r="5" fill="#ff44ff"/>
+<text x="65" y="834" fill="#aaa" font-size="9" font-family="monospace">rustc_serialize: g0(21,29,40) → g1(18,23,6) → g3(31,24,22)</text>
+<circle cx="50" cy="848" r="5" fill="#44ffff"/>
+<text x="65" y="852" fill="#aaa" font-size="9" font-family="monospace">rustc_type_ir: g0(40,16,7) → g1(11,16,0) → g2(43,47,10) → g3(56,36,37)</text>
+<circle cx="50" cy="866" r="5" fill="#ffff44"/>
+<text x="65" y="870" fill="#aaa" font-size="9" font-family="monospace">rustc_lexer: g0(70,41,8) → g1(0,48,28) → g3(70,41,8)</text>
+<text x="40" y="880" fill="#666" font-size="8" font-family="monospace">Arrows = Hecke operators (grade transitions). Circle size = grade level. Hover for details.</text>
+</svg>

@@ -1,0 +1,82 @@
+26D Monster Hash Conformal Field - Interactive Flight Game. WASD+mouse to fly through 200 files in 26-dimensional space (10 Monster basins + 15 SSP ngrams). Tab=lock, F/N=cycle. https://solana.solfunmeme.com/notebooklm/2026/03/27/fly26d.html
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="800">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0f4"/></marker></defs>
+<rect width="100%" height="100%" fill="#010101"/>
+<circle cx="500" cy="400" r="280" fill="none" stroke="#1a3a1a" stroke-width="1" stroke-dasharray="4,8"/>
+<text x="500" y="30" text-anchor="middle" fill="#ffd700" font-size="14" font-family="monospace">RUSTC AS EIGENFORM — Strange Loop</text>
+<text x="500" y="50" text-anchor="middle" fill="#666" font-size="10" font-family="monospace">Each node = Hecke T_p · Arrows = phase transitions · Loop closes</text>
+<line x1="500" y1="120" x2="640" y2="158" stroke="#0f4" stroke-opacity="0.96" stroke-width="2.9" marker-end="url(#arrow)"/>
+<line x1="640" y1="158" x2="742" y2="260" stroke="#0f4" stroke-opacity="0.28" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="742" y1="260" x2="780" y2="400" stroke="#0f4" stroke-opacity="1.00" stroke-width="4.5" marker-end="url(#arrow)"/>
+<line x1="780" y1="400" x2="742" y2="540" stroke="#0f4" stroke-opacity="1.00" stroke-width="11.8" marker-end="url(#arrow)"/>
+<line x1="742" y1="540" x2="640" y2="642" stroke="#0f4" stroke-opacity="1.00" stroke-width="7.9" marker-end="url(#arrow)"/>
+<line x1="640" y1="642" x2="500" y2="680" stroke="#0f4" stroke-opacity="0.77" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line x1="500" y1="680" x2="360" y2="642" stroke="#0f4" stroke-opacity="1.00" stroke-width="11.0" marker-end="url(#arrow)"/>
+<line x1="360" y1="642" x2="258" y2="540" stroke="#0f4" stroke-opacity="1.00" stroke-width="11.0" marker-end="url(#arrow)"/>
+<line x1="258" y1="540" x2="220" y2="400" stroke="#0f4" stroke-opacity="1.00" stroke-width="11.0" marker-end="url(#arrow)"/>
+<line x1="220" y1="400" x2="258" y2="260" stroke="#0f4" stroke-opacity="0.15" stroke-width="1.0" marker-end="url(#arrow)"/>
+<line x1="258" y1="260" x2="360" y2="158" stroke="#0f4" stroke-opacity="1.00" stroke-width="11.0" marker-end="url(#arrow)"/>
+<line x1="360" y1="158" x2="500" y2="120" stroke="#0f4" stroke-opacity="0.45" stroke-width="1.9" marker-end="url(#arrow)"/>
+<circle cx="500" cy="120" r="33" fill="#0f4" fill-opacity="0.15" stroke="#0f4" stroke-width="1.5" data-hecke="T_2" data-prime="2" data-ev="0.192082" data-hash="4c22acb2" data-module="rustc_lexer"/>
+<text x="500" y="116" text-anchor="middle" fill="#0f4" font-size="11" font-family="monospace" font-weight="bold">T_2</text>
+<text x="500" y="128" text-anchor="middle" fill="#888" font-size="8" font-family="monospace">Lexer</text>
+<text x="500" y="138" text-anchor="middle" fill="#555" font-size="7" font-family="monospace">4c22acb2 λ=0.192</text>
+<circle cx="640" cy="158" r="22" fill="#0f4" fill-opacity="0.15" stroke="#0f4" stroke-width="1.5" data-hecke="T_5" data-prime="5" data-ev="0.056063" data-hash="8225b5fa" data-module="rustc_parse"/>
+<text x="640" y="154" text-anchor="middle" fill="#0f4" font-size="11" font-family="monospace" font-weight="bold">T_5</text>
+<text x="640" y="166" text-anchor="middle" fill="#888" font-size="8" font-family="monospace">Parser</text>
+<text x="640" y="176" text-anchor="middle" fill="#555" font-size="7" font-family="monospace">8225b5fa λ=0.056</text>
+<circle cx="742" cy="260" r="46" fill="#0f4" fill-opacity="0.15" stroke="#0f4" stroke-width="1.5" data-hecke="T_7" data-prime="7" data-ev="0.346267" data-hash="8fa19a32" data-module="rustc_resolve"/>
+<text x="742" y="256" text-anchor="middle" fill="#0f4" font-size="11" font-family="monospace" font-weight="bold">T_7</text>
+<text x="742" y="268" text-anchor="middle" fill="#888" font-size="8" font-family="monospace">Resolver</text>
+<text x="742" y="278" text-anchor="middle" fill="#555" font-size="7" font-family="monospace">8fa19a32 λ=0.346</text>
+<circle cx="780" cy="400" r="104" fill="#0f4" fill-opacity="0.15" stroke="#0f4" stroke-width="1.5" data-hecke="T_11" data-prime="11" data-ev="1.075017" data-hash="d107a77f" data-module="rustc_ast_lowering"/>
+<text x="780" y="396" text-anchor="middle" fill="#0f4" font-size="11" font-family="monospace" font-weight="bold">T_11</text>
+<text x="780" y="408" text-anchor="middle" fill="#888" font-size="8" font-family="monospace">AST→HIR</text>
+<text x="780" y="418" text-anchor="middle" fill="#555" font-size="7" font-family="monospace">d107a77f λ=1.075</text>
+<circle cx="742" cy="540" r="73" fill="#0f4" fill-opacity="0.15" stroke="#0f4" stroke-width="1.5" data-hecke="T_13" data-prime="13" data-ev="0.693370" data-hash="0b0baf35" data-module="rustc_typeck"/>
+<text x="742" y="536" text-anchor="middle" fill="#0f4" font-size="11" font-family="monospace" font-weight="bold">T_13</text>
+<text x="742" y="548" text-anchor="middle" fill="#888" font-size="8" font-family="monospace">TypeCheck</text>
+<text x="742" y="558" text-anchor="middle" fill="#555" font-size="7" font-family="monospace">0b0baf35 λ=0.693</text>
+<circle cx="640" cy="642" r="30" fill="#f48" fill-opacity="0.15" stroke="#f48" stroke-width="1.5" data-hecke="T_17" data-prime="17" data-ev="0.154549" data-hash="8bcc46a9" data-module="rustc_mir_build"/>
+<text x="640" y="638" text-anchor="middle" fill="#f48" font-size="11" font-family="monospace" font-weight="bold">T_17</text>
+<text x="640" y="650" text-anchor="middle" fill="#888" font-size="8" font-family="monospace">HIR→MIR</text>
+<text x="640" y="660" text-anchor="middle" fill="#555" font-size="7" font-family="monospace">8bcc46a9 λ=0.155</text>
+<circle cx="500" cy="680" r="98" fill="#4af" fill-opacity="0.15" stroke="#4af" stroke-width="1.5" data-hecke="T_19" data-prime="19" data-ev="1.000000" data-hash="773f57ec" data-module="rustc_borrowck"/>
+<text x="500" y="676" text-anchor="middle" fill="#4af" font-size="11" font-family="monospace" font-weight="bold">T_19</text>
+<text x="500" y="688" text-anchor="middle" fill="#888" font-size="8" font-family="monospace">BorrowCheck</text>
+<text x="500" y="698" text-anchor="middle" fill="#555" font-size="7" font-family="monospace">773f57ec λ=1.000</text>
+<circle cx="360" cy="642" r="98" fill="#4af" fill-opacity="0.15" stroke="#4af" stroke-width="1.5" data-hecke="T_23" data-prime="23" data-ev="1.000000" data-hash="dfc8704d" data-module="rustc_codegen_llvm"/>
+<text x="360" y="638" text-anchor="middle" fill="#4af" font-size="11" font-family="monospace" font-weight="bold">T_23</text>
+<text x="360" y="650" text-anchor="middle" fill="#888" font-size="8" font-family="monospace">MIR→LLVM</text>
+<text x="360" y="660" text-anchor="middle" fill="#555" font-size="7" font-family="monospace">dfc8704d λ=1.000</text>
+<circle cx="258" cy="540" r="98" fill="#f48" fill-opacity="0.15" stroke="#f48" stroke-width="1.5" data-hecke="T_29" data-prime="29" data-ev="1.000000" data-hash="81417d5f" data-module="LLVM"/>
+<text x="258" y="536" text-anchor="middle" fill="#f48" font-size="11" font-family="monospace" font-weight="bold">T_29</text>
+<text x="258" y="548" text-anchor="middle" fill="#888" font-size="8" font-family="monospace">LLVM→Object</text>
+<text x="258" y="558" text-anchor="middle" fill="#555" font-size="7" font-family="monospace">81417d5f λ=1.000</text>
+<circle cx="220" cy="400" r="18" fill="#f48" fill-opacity="0.15" stroke="#f48" stroke-width="1.5" data-hecke="T_31" data-prime="31" data-ev="0.000640" data-hash="d32332a3" data-module="rustc_codegen_ssa"/>
+<text x="220" y="396" text-anchor="middle" fill="#f48" font-size="11" font-family="monospace" font-weight="bold">T_31</text>
+<text x="220" y="408" text-anchor="middle" fill="#888" font-size="8" font-family="monospace">Linker</text>
+<text x="220" y="418" text-anchor="middle" fill="#555" font-size="7" font-family="monospace">d32332a3 λ=0.001</text>
+<circle cx="258" cy="260" r="98" fill="#f48" fill-opacity="0.15" stroke="#f48" stroke-width="1.5" data-hecke="T_37" data-prime="37" data-ev="1.000000" data-hash="9279a868" data-module="cargo"/>
+<text x="258" y="256" text-anchor="middle" fill="#f48" font-size="11" font-family="monospace" font-weight="bold">T_37</text>
+<text x="258" y="268" text-anchor="middle" fill="#888" font-size="8" font-family="monospace">CargoWorkspace</text>
+<text x="258" y="278" text-anchor="middle" fill="#555" font-size="7" font-family="monospace">9279a868 λ=1.000</text>
+<circle cx="360" cy="158" r="25" fill="#f48" fill-opacity="0.15" stroke="#f48" stroke-width="1.5" data-hecke="T_41" data-prime="41" data-ev="0.090909" data-hash="11da5b7d" data-module="nix"/>
+<text x="360" y="154" text-anchor="middle" fill="#f48" font-size="11" font-family="monospace" font-weight="bold">T_41</text>
+<text x="360" y="166" text-anchor="middle" fill="#888" font-size="8" font-family="monospace">NixBuild</text>
+<text x="360" y="176" text-anchor="middle" fill="#555" font-size="7" font-family="monospace">11da5b7d λ=0.091</text>
+<text x="20" y="750" fill="#0f4" font-size="9" font-family="monospace">● Earth {2,3,5,7,11,13,47}</text>
+<text x="20" y="765" fill="#f48" font-size="9" font-family="monospace">● Spoke {17,29,31,41,59,71}</text>
+<text x="20" y="780" fill="#4af" font-size="9" font-family="monospace">● Hub {19,23}</text>
+<text x="300" y="765" fill="#555" font-size="7" font-family="monospace">data-* on each node = CFT shard · Script reads own geometry (strange loop)</text>
+<script type="text/javascript"><![CDATA[
+document.addEventListener('DOMContentLoaded',function(){
+var ns=document.querySelectorAll('circle[data-hecke]'),log='';
+ns.forEach(function(n){log+=n.getAttribute('data-hecke')+' → '});
+if(ns.length>0)log+=ns[0].getAttribute('data-hecke');
+console.log('STRANGE LOOP: '+log);
+var i=0;setInterval(function(){ns.forEach(function(n){n.style.fillOpacity='0.15'});ns[i%ns.length].style.fillOpacity='0.6';i++},500);
+});
+]]></script>
+</svg>

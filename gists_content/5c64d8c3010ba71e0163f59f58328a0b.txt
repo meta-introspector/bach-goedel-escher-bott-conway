@@ -1,0 +1,59 @@
+Monster Moonshine OEIS email v4 (with cross-refs)
+
+To: submit@oeis.org
+Subject: New OEIS Sequences: Monster Moonshine Exponents (15 sequences from A001379)
+
+Dear OEIS Editors,
+
+I would like to submit 15 new integer sequences derived from the Monster group irreducible representations, related to Monstrous Moonshine.
+
+BACKGROUND:
+The Monster group is the largest sporadic simple group (order |M| ≈ 8.08×10^53). It has 194 irreducible representations with dimensions given in OEIS A001379. The j-invariant modular form coefficients decompose as weighted sums of these dimensions - this is the McKay-Thompson observation that inspired Monstrous Moonshine (Conway & Norton 1979, proven by Borcherds 1992).
+
+THE SEQUENCES:
+For each of the 15 supersingular primes p (dividing |M| with (p+1) | 24), we define:
+  a(n) = v_p(A001379(n)) = exponent of p in the n-th Monster irreducible representation (n = 0 to 193)
+
+Where v_p(x) is the p-adic valuation. Each sequence has exactly 194 terms.
+
+- exp_2 through exp_71 (one for each SSP prime: 2,3,5,7,11,13,17,19,23,29,31,41,47,59,71)
+
+FORMULA:
+For each sequence: a(n) = v_p(A001379(n))
+
+LINK TO A001379:
+These sequences are derived from and directly Cross-Reference OEIS A001379 (dimensions of Monster irreps). They provide the p-adic valuations for each SSP prime.
+
+INTERESTING FINDINGS:
+
+1. **196883 = 47 × 59 × 71**: The smallest non-trivial Monster irrep (A001379(1) = 196883) has exactly these three largest SSP primes as factors with exponent 1 each. This was McKay's original observation (noting that 196884 = 196883 + 1).
+
+2. **j-coefficient decompositions** (McKay-Thompson):
+   - j₁ = 196884 = A001379(0) + A001379(1) = 1 + 196883
+   - j₂ = 21493760 = A001379(0) + A001379(1) + A001379(2) = 1 + 196883 + 21296876
+   - This shows j-invariant coefficients are weighted sums of Monster irreps
+
+3. **Defect Zero Representations**: For larger SSP primes (41, 47, 59, 71), the preponderance of "1" entries mark representations where v_p(dimension) = 1 - these are the "defect zero" representations that remain irreducible when reduced modulo p.
+
+4. **Quotient Relationship**: Every prime factor in all 194 irreps divides |M|. Since dim(irrep) | |M| for any finite group, these exponent sequences are bounded by the exponents in |M|.
+
+5. **Spiral / 12-turns**: The 12-turn spiral visualization corresponds to 1/2 × Leech lattice dimension (24).
+
+REFERENCES:
+- OEIS A001379: Degrees of irreducible representations of Monster group M
+- Monstrous Moonshine: Conway & Norton (1979), Borcherds (1992)
+
+DATA LINKS (Public GitHub Gists):
+- OEIS sequence data (JSON): https://gist.github.com/jmikedupont2/9e179632200019619c01a1a07cc91b80
+- Matrix heatmap visualization: https://gist.github.com/jmikedupont2/c350d5684246918be7dd39a5b9663694
+- LLM brief generator: https://gist.github.com/jmikedupont2/b0766375056f3e0c86ae7357902e809a
+
+PROPOSED NAMES (example for prime 2):
+- A00???(n) = exponent of 2 in dimension of n-th Monster irreducible representation
+
+Please advise on A-numbers and any corrections.
+
+Best regards,
+[Your Name]
+[Your Affiliation]
+[Contact Information]

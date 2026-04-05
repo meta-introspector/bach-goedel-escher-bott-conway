@@ -1,0 +1,125 @@
+Star Navigator: steganographic FRACTRAN (Conway's PRIMEGAME hidden in a space game)
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Star Navigator</title>
+  <style>
+    body { margin: 0; background: #000; overflow: hidden; }
+    canvas { display: block; }
+    #hud { position: absolute; top: 10px; left: 10px; color: #0f0; font: 14px monospace; }
+    #score { position: absolute; top: 10px; right: 10px; color: #ff0; font: 18px monospace; }
+  </style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="hud">WASD: fly · Space: brake · Collect ⭐</div>
+<div id="score">Score: <span id="sc">0</span></div>
+<script>
+const C = document.getElementById('c'), X = C.getContext('2d');
+C.width = innerWidth; C.height = innerHeight;
+
+// ── Visible game state ──
+const ship = {x: C.width/2, y: C.height/2, vx: 0, vy: 0};
+let score = 0, frame = 0;
+const stars = [], pickups = [];
+for (let i = 0; i < 200; i++) stars.push({x: Math.random()*C.width, y: Math.random()*C.height, s: Math.random()*2+0.5});
+function spawnPickup() { pickups.push({x: Math.random()*C.width, y: Math.random()*C.height}); }
+for (let i = 0; i < 5; i++) spawnPickup();
+
+// ── Hidden FRACTRAN engine (Conway's PRIMEGAME) ──
+const PG = [[17,91],[78,85],[19,51],[23,38],[29,33],[77,29],[95,23],[77,19],[1,17],[11,13],[13,11],[15,14],[15,2],[55,1]];
+let fn = 2n; // FRACTRAN state
+const trace = [2n];
+function fstep() {
+  for (const [n,d] of PG) {
+    const p = fn * BigInt(n);
+    if (p % BigInt(d) === 0n) { fn = p / BigInt(d); trace.push(fn); return; }
+  }
+}
+// Check if n is a power of 2
+function isPow2(n) { return n > 0n && (n & (n - 1n)) === 0n; }
+function log2(n) { let k = 0; while (n > 1n) { n >>= 1n; k++; } return k; }
+
+// ── Input ──
+const keys = {};
+onkeydown = e => keys[e.key.toLowerCase()] = true;
+onkeyup = e => keys[e.key.toLowerCase()] = false;
+
+// ── Game loop ──
+function loop() {
+  frame++;
+  const spd = 3;
+  if (keys['w']) ship.vy -= spd; if (keys['s']) ship.vy += spd;
+  if (keys['a']) ship.vx -= spd; if (keys['d']) ship.vx += spd;
+  if (keys[' ']) { ship.vx *= 0.8; ship.vy *= 0.8; }
+  ship.vx *= 0.97; ship.vy *= 0.97;
+  ship.x += ship.vx; ship.y += ship.vy;
+  ship.x = (ship.x + C.width) % C.width;
+  ship.y = (ship.y + C.height) % C.height;
+
+  // Hidden: run PRIMEGAME steps each frame
+  for (let i = 0; i < 3; i++) fstep();
+
+  // Pickup collision
+  for (let i = pickups.length - 1; i >= 0; i--) {
+    const dx = ship.x - pickups[i].x, dy = ship.y - pickups[i].y;
+    if (dx*dx + dy*dy < 400) {
+      score++; pickups.splice(i, 1); spawnPickup();
+      // Hidden: collecting a star also advances PRIMEGAME 10 extra steps
+      for (let j = 0; j < 10; j++) fstep();
+    }
+  }
+
+  // ── Render ──
+  X.fillStyle = '#000'; X.fillRect(0, 0, C.width, C.height);
+  // Parallax stars
+  for (const s of stars) {
+    X.fillStyle = `rgba(200,220,255,${0.4+s.s/3})`;
+    X.fillRect((s.x - ship.vx*s.s*0.1 + C.width) % C.width, (s.y - ship.vy*s.s*0.1 + C.height) % C.height, s.s+0.5, s.s+0.5);
+  }
+  // Pickups
+  X.font = '24px serif';
+  for (const p of pickups) X.fillText('⭐', p.x - 12, p.y + 8);
+  // Ship
+  X.shadowColor = '#0ff'; X.shadowBlur = 25;
+  X.font = '36px serif'; X.fillText('🚀', ship.x - 18, ship.y + 13);
+  X.shadowBlur = 0;
+  // Score
+  document.getElementById('sc').textContent = score;
+
+  requestAnimationFrame(loop);
+}
+loop();
+
+// ── NFT export (hidden FRACTRAN result embedded) ──
+function exportNFT() {
+  const primes = [];
+  for (const s of trace) { if (isPow2(s)) primes.push(log2(s)); }
+  return {
+    game: "Star Navigator",
+    player_score: score,
+    frames_played: frame,
+    // Steganographic payload: PRIMEGAME results hidden as "star_coordinates"
+    star_coordinates: primes.map((p, i) => ({id: i, x: p * 7, y: p * 13, prime: p})),
+    total_stars_mapped: trace.length,
+    session: Date.now(),
+    commitment: Array.from(new Uint8Array(new TextEncoder().encode(
+      trace.slice(-8).map(String).join(':')
+    ))).map(b => b.toString(16).padStart(2,'0')).join('')
+  };
+}
+// Ctrl+E to export
+document.addEventListener('keydown', e => {
+  if (e.ctrlKey && e.key === 'e') {
+    e.preventDefault();
+    const nft = exportNFT();
+    console.log('NFT payload:', nft);
+    const b = new Blob([JSON.stringify(nft, null, 2)], {type: 'application/json'});
+    const a = document.createElement('a'); a.href = URL.createObjectURL(b);
+    a.download = `star-navigator-${Date.now()}.json`; a.click();
+  }
+});
+</script>
+</body>
+</html>
