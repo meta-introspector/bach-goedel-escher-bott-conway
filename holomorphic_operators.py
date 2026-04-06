@@ -59,12 +59,11 @@ def apply_frobenius_map(omega):
             val = omega % n
             if val > 0 and pow(val, p, n) == val:
                 fixed_points.append((p, n))
-    return f"Frobenius Fixed Points: {len(fixed_points)} found across p={{2,3,5}}"
+    return len(fixed_points)
 
-def apply_dimensional_descent(omega):
-    # Map the 27 Frobenius Fixed Points through stringy thresholds
+def apply_dimensional_descent(fixed_points_count):
+    # Map the Frobenius Fixed Points through stringy thresholds
     # 27 -> 26 (Bosonic) -> 24 (Leech) -> 23 (SSP)
-    fixed_points_count = 27 # From previous run
     bosonic = fixed_points_count - 1
     leech = bosonic - 2
     ssp_kernel = leech - 1
@@ -76,6 +75,9 @@ def run_holomorphic_report():
     print("# HOLOMORPHIC SYSTEM REPORT: Ω LAYER ANALYSIS")
     print(f"## Master Number Ω: {len(str(OMEGA))} digits\n")
     
+    # Compute base values
+    f_count = apply_frobenius_map(OMEGA)
+    
     print(f"* **NOETHER**: {apply_noether_cons(OMEGA)}")
     print(f"* **FOURIER**: {apply_fourier_spec(OMEGA)}")
     print(f"* **VIRASORO**: {apply_virasoro_charge(OMEGA)}")
@@ -83,8 +85,8 @@ def run_holomorphic_report():
     print(f"* **MORSE/BOTT**: {apply_morse_bott(OMEGA)}")
     print(f"* **BOOLE**: {apply_boole_logic(OMEGA)}")
     print(f"* **GALOIS**: {apply_galois_symmetry(OMEGA)}")
-    print(f"* **FROBENIUS**: {apply_frobenius_map(OMEGA)}")
-    print(f"* **DESCENT**: {apply_dimensional_descent(OMEGA)}")
+    print(f"* **FROBENIUS**: Frobenius Fixed Points: {f_count} found across p={{2,3,5}}")
+    print(f"* **DESCENT**: {apply_dimensional_descent(f_count)}")
     
     print("\n## Holomorphic Mapping Summary")
     print("The system is self-consistent: the Noether charges are conserved under the Hecke operator")
