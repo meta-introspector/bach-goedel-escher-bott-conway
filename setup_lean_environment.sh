@@ -33,10 +33,14 @@ proot-distro login alpine -- sh -c "
         rm elan.tar.gz elan-init
     fi
 
-    # Fix library search path for Lean modules
-    TOOLCHAIN=\$(ls -d /root/.elan/toolchains/leanprover--lean4---* | head -n 1)
+    # Fix library search path for Lean modules (including submodules)
+    TOOLCHAIN=$(ls -d /root/.elan/toolchains/leanprover--lean4---* | head -n 1)
     mkdir -p /lib/lean
-    ln -sf \$TOOLCHAIN/lib/lean/* /lib/lean/
+    ln -sf $TOOLCHAIN/lib/lean/* /lib/lean/
+    
+    # Add MonsterVOA to the search path
+    mkdir -p /lib/lean/MonsterVOA
+    ln -sf /data/data/com.termux/files/home/experiments/MonsterVOA/MonsterVOA/* /lib/lean/MonsterVOA/
     
     echo '[+] Alpine provisioning complete.'
 "
